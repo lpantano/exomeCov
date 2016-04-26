@@ -31,10 +31,10 @@ if (is.null(qc$offtarget)) {
 qc_table <- qc[, metrics]
 
 qc_table$Mapped_reads_pct = as.numeric(gsub("%", "", qc_table$Mapped_reads_pct))
-qc_table$Mapped_reads_pct <- qc_table$Mapped_reads_pct / 100
+#qc_table$Mapped_reads_pct <- qc_table$Mapped_reads_pct / 100
 
 qc_table$Duplicates_pct = as.numeric(gsub("%", "", qc_table$Duplicates_pct))
-qc_table$Duplicates_pct <- qc_table$Duplicates_pct / 100
+#qc_table$Duplicates_pct <- qc_table$Duplicates_pct / 100
 
 # Init intervals for coloring
 total_reads_intrv = quantile(c(0,qc_table$Total_reads), c(.25,.50,.75))
